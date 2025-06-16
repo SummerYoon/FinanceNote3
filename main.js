@@ -23,12 +23,31 @@ function addExpense() {
     item.appendChild(amountSpan);
     list.appendChild(item);
 
-    localStorage.setItem("expenses", list.innerHTML);
+    // 로컬스토리지 저장
+    const newEntry = { name: desc, amount: amount, category: category };
+    const stored = JSON.parse(localStorage.getItem("expenses") || "[]");
+    stored.push(newEntry);
+    localStorage.setItem("expenses", JSON.stringify(stored));
 }
 
 function loadExpenses() {
     const list = document.getElementById("expensesList");
-    if (list) list.innerHTML = localStorage.getItem("expenses") || "";
+    if (!list) return;
+
+    list.innerHTML = ""; // 초기화
+
+    const stored = localStorage.getItem("expenses");
+    if (!stored) return;
+
+    const items = JSON.parse(stored);
+    items.forEach(expense => {
+        const li = document.createElement("li");
+        li.textContent = `${expense.name} ${expense.category}`;
+        const amountSpan = document.createElement("span");
+        amountSpan.textContent = `-${Number(expense.amount).toLocaleString()}`;
+        li.appendChild(amountSpan);
+        list.appendChild(li);
+    });
 }
 
 function addCategory() {
