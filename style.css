@@ -65,21 +65,14 @@ header {
     font-size: 18pt;
     margin: 1em;
 }
-#expensesList {
-    list-style: none;
-    padding: 0 1em;
-}
-#expensesList li {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14pt;
-    margin: 0.5em 0;
-}
-footer {
+footer.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 1em 0;
     background: white;
+    padding: 1em 0;
 }
 .nav-button {
     font-size: 12pt;
@@ -88,4 +81,15 @@ footer {
 }
 .nav-button.active {
     font-weight: bold;
+}
+.expense-entry {
+    font-size: 14pt;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3em 1em;
+}
+.expense-entry small {
+    display: block;
+    font-size: 10pt;
+    color: gray;
 }
