@@ -6,30 +6,45 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   background-color: #fff;
   color: #000;
+  font-size: 16px;
 }
 
 .title {
   font-family: 'WDXL Lubrifont SC', sans-serif;
-  font-size: 33pt;
+  font-size: 40px;
 }
 
 .subtitle {
   font-family: 'Roboto', sans-serif;
-  font-size: 18pt;
+  font-size: 22px;
+}
+
+input, select {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0;
 }
 
 .button-large {
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 15pt;
+  font-size: 17px;
+  padding: 10px 20px;
   color: #AAAAAA;
+  background: none;
+  border: 1px solid #AAAAAA;
+  border-radius: 4px;
 }
 
 .button-small {
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 15pt;
+  font-size: 16px;
+  width: auto;
+  height: 38px;
+  padding: 0 14px;
   background-color: #000000;
   color: #FFFFFF;
-  width: 86px;
-  height: 34px;
   border: none;
+  border-radius: 4px;
 }
