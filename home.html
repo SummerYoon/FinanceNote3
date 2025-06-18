@@ -1,34 +1,30 @@
+
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1 class="main-title">Home</h1>
-    <button class="top-btn" onclick="window.location.href='setting.html'">설정</button>
-  </header>
-  <section id="date-box"></section>
-  <section id="input-area">
-    <h2>지출 일지</h2>
-    <input type="text" id="expense-name" placeholder="내역">
-    <input type="number" id="expense-amount" placeholder="금액">
-    <select id="expense-category"></select>
-    <button onclick="addExpense()">추가하기</button>
-  </section>
-  <section id="expenses-track">
-    <h2>Expenses Track</h2>
-    <div id="expenses-list"></div>
-  </section>
-  <nav>
-    <button class="active">홈</button>
-    <button>분석</button>
-    <button>습관</button>
-    <button>수입</button>
-    <button>자산</button>
-  </nav>
+  <div style="display:flex;justify-content:space-between;padding:10px;">
+    <div class="title">Home</div>
+    <button onclick="window.location.href='setting.html'" class="button-small">설정</button>
+  </div>
+  <div style="padding:10px;">
+    <div id="dateBox" style="width:346px;height:34px;"></div>
+    <div style="width:345px;height:257px;margin-top:10px;">
+      <div class="subtitle">지출 일지</div>
+      <input type="text" id="entry" placeholder="내역"><br>
+      <input type="number" id="amount" placeholder="금액"><br>
+      <select id="categoryDropdown"></select><br>
+      <button class="button-large" onclick="addExpense()">추가하기</button>
+    </div>
+  </div>
+  <div style="padding:10px;">
+    <div class="subtitle">Expenses Track</div>
+    <div id="expenseList"></div>
+  </div>
 </body>
 </html>

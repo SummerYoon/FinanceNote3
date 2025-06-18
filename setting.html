@@ -1,20 +1,21 @@
+
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Setting</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1 class="main-title">Setting</h1>
-    <button class="top-btn" onclick="window.location.href='home.html'">x</button>
-  </header>
-  <section id="category-setting">
-    <input type="text" id="new-category" placeholder="새 카테고리 입력">
-    <button onclick="addCategory()">추가하기</button>
-    <ul id="category-list"></ul>
-  </section>
+  <div style="display:flex;justify-content:space-between;padding:10px;">
+    <div class="title">Setting</div>
+    <button onclick="window.location.href='home.html'" class="button-small">X</button>
+  </div>
+  <div style="padding:10px;">
+    <input type="text" id="newCategory" placeholder="새 카테고리">
+    <button class="button-large" onclick="addCategory()">추가하기</button>
+    <ul id="categoryList"></ul>
+  </div>
 </body>
 </html>
