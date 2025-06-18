@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <link rel='preconnect' href='https://fonts.googleapis.com'>
-  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap' rel='stylesheet'>
-  <link rel='stylesheet' href='style.css'>
+  <meta charset="UTF-8">
+  <title>Setting</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
   <header>
-    <div class='page-title'>Setting</div>
-    <button class='setting-btn' onclick="location.href='home.html'">x</button>
+    <h1 class="main-title">Setting</h1>
+    <button class="top-btn" onclick="window.location.href='home.html'">x</button>
   </header>
-  <main id='setting-content'></main>
-  <script src='main.js'></script>
+  <section id="category-setting">
+    <input type="text" id="new-category" placeholder="새 카테고리 입력">
+    <button onclick="addCategory()">추가하기</button>
+    <ul id="category-list"></ul>
+  </section>
 </body>
 </html>

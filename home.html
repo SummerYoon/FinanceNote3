@@ -1,22 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <link rel='preconnect' href='https://fonts.googleapis.com'>
-  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap' rel='stylesheet'>
-  <link rel='stylesheet' href='style.css'>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
   <header>
-    <div class='page-title'>Home</div>
-    <button class='setting-btn' onclick="location.href='setting.html'">설정</button>
+    <h1 class="main-title">Home</h1>
+    <button class="top-btn" onclick="window.location.href='setting.html'">설정</button>
   </header>
-  <main id='main-content'></main>
-  <footer>
-    <nav class='bottom-nav'>홈 | 분석 | 습관 | 수입 | 자산</nav>
-  </footer>
-  <script src='main.js'></script>
+  <section id="date-box"></section>
+  <section id="input-area">
+    <h2>지출 일지</h2>
+    <input type="text" id="expense-name" placeholder="내역">
+    <input type="number" id="expense-amount" placeholder="금액">
+    <select id="expense-category"></select>
+    <button onclick="addExpense()">추가하기</button>
+  </section>
+  <section id="expenses-track">
+    <h2>Expenses Track</h2>
+    <div id="expenses-list"></div>
+  </section>
+  <nav>
+    <button class="active">홈</button>
+    <button>분석</button>
+    <button>습관</button>
+    <button>수입</button>
+    <button>자산</button>
+  </nav>
 </body>
 </html>
