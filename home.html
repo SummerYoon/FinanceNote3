@@ -1,1 +1,38 @@
-<!-- Placeholder for home.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="home.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="title">Home</h1>
+    <button class="big-button" onclick="location.href='setting.html'">설정</button>
+  </header>
+  <section id="dateBox" class="date-box"></section>
+  <section class="input-box">
+    <h2>지출 일지</h2>
+    <input type="text" id="name" placeholder="내역">
+    <input type="number" id="amount" placeholder="금액">
+    <select id="category"></select>
+    <button class="small-button" onclick="addExpense()">추가하기</button>
+  </section>
+  <section>
+    <h2 class="mini-title">Expenses Track</h2>
+    <div id="expensesList"></div>
+  </section>
+  <nav class="nav-bar">
+    <button class="active">홈</button>
+    <button>분석</button>
+    <button>습관</button>
+    <button>수입</button>
+    <button>자산</button>
+  </nav>
+</body>
+</html>

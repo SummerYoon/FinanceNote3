@@ -1,1 +1,27 @@
-<!-- Placeholder for setting.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="setting.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="title">Setting</h1>
+    <button class="big-button" onclick="location.href='home.html'">x</button>
+  </header>
+  <section class="input-box">
+    <input type="text" id="newCategory" placeholder="새 카테고리">
+    <button class="small-button" onclick="addCategory()">추가하기</button>
+  </section>
+  <section>
+    <h2 class="mini-title">카테고리 목록</h2>
+    <ul id="categoryList"></ul>
+  </section>
+</body>
+</html>
